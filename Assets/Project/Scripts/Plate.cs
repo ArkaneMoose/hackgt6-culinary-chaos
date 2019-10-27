@@ -112,5 +112,24 @@ public class Plate : MonoBehaviour
             Destroy(otherGameObject.GetComponent<InteractionBehaviour>());
             Destroy(otherGameObject.GetComponent<Rigidbody>());
         }
+
+        // returns true if incredient passes check, false otherwise
+        Scoring.CurTicket.CheckIngredient(other.gameObject.name);
+        if (Scoring.CurTicket.HasWon)
+        {
+            Scoring.NextTicket();
+
+            for (int i = 0; i < ingredientFlags.Length; i++)
+            {
+                if (ingredientFlags[i].isPlaced)
+                {
+                    Destroy(ingredientFlags[i].gameObject);
+                }
+                ingredientFlags[i] = new IngredientFlag();
+            }
+
+            transform.localPosition = new Vector3(transform.localPosition.x, 1f, transform.localPosition.z);
+            transform.localScale = new Vector3(transform.localScale.x, 1f, transform.localScale.z);
+        }
     }
 }

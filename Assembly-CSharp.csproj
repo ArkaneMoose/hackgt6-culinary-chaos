@@ -299,8 +299,10 @@
      <Compile Include="Assets\Project\Scripts\AllowGraspedObjects.cs" />
      <Compile Include="Assets\Project\Scripts\DebugFPSScript.cs" />
      <Compile Include="Assets\Project\Scripts\Plate.cs" />
+     <Compile Include="Assets\Project\Scripts\Scoring.cs" />
      <Compile Include="Assets\Project\Scripts\SlidingDoor.cs" />
      <Compile Include="Assets\Project\Scripts\SpawnTrigger.cs" />
+     <Compile Include="Assets\Project\Scripts\Ticket.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
