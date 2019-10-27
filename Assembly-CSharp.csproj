@@ -297,8 +297,13 @@
      <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\KabschSolver.cs" />
      <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\PhysicsCallbacks.cs" />
      <Compile Include="Assets\Project\Scripts\AllowGraspedObjects.cs" />
+     <Compile Include="Assets\Project\Scripts\CameraBillboard.cs" />
+     <Compile Include="Assets\Project\Scripts\Cuttable.cs" />
+     <Compile Include="Assets\Project\Scripts\CuttingBoard.cs" />
      <Compile Include="Assets\Project\Scripts\DebugFPSScript.cs" />
+     <Compile Include="Assets\Project\Scripts\Meat.cs" />
      <Compile Include="Assets\Project\Scripts\Plate.cs" />
+     <Compile Include="Assets\Project\Scripts\PlayArea.cs" />
      <Compile Include="Assets\Project\Scripts\Scoring.cs" />
      <Compile Include="Assets\Project\Scripts\SlidingDoor.cs" />
      <Compile Include="Assets\Project\Scripts\SpawnTrigger.cs" />

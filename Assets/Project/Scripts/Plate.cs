@@ -77,8 +77,15 @@ public class Plate : MonoBehaviour
         ingredient.gameObject = ingredObject;
 
         GameObject template = getTemplate(ingredObject);
-        ingredient.thiccness = template.transform.lossyScale.y
-            * template.GetComponent<Renderer>().bounds.size.y;
+        if (ingredObject.tag == "TomatoSlice")
+        {
+            ingredient.thiccness = 0.2f;
+        }
+        else
+        {
+            ingredient.thiccness = template.transform.lossyScale.y
+                * template.GetComponent<Renderer>().bounds.size.y;
+        }
 
         ingredient.setHeight(platePos);
         updateCollisionHeight(ingredient.thiccness);
@@ -112,12 +119,22 @@ public class Plate : MonoBehaviour
             Destroy(otherGameObject.GetComponent<InteractionBehaviour>());
             Destroy(otherGameObject.GetComponent<Rigidbody>());
         }
+        else
+        {
+            return;
+        }
 
         // returns true if incredient passes check, false otherwise
-        Scoring.CurTicket.CheckIngredient(other.gameObject.name);
-        if (Scoring.CurTicket.HasWon)
+        if (!Scoring.CurTicket.CheckIngredient(otherGameObject.tag) || Scoring.CurTicket.HasWon)
         {
-            Scoring.NextTicket();
+            if (Scoring.CurTicket.HasWon)
+            {
+                Scoring.NextTicket();
+            }
+            else
+            {
+                Scoring.WrongTicket();
+            }
 
             for (int i = 0; i < ingredientFlags.Length; i++)
             {

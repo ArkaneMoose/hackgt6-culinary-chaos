@@ -39,4 +39,12 @@ public class Scoring : MonoBehaviour
         CurTicket.NewTicket(CurLevel);
         ticketImage.sprite = CurTicket.CurSprite;
     }
+
+    public static void WrongTicket()
+    {
+        Score -= 0.25f;
+        scoreText.text = string.Format("${0:#.00}", Score);
+        CurTicket.NewTicket(CurLevel);
+        ticketImage.sprite = CurTicket.CurSprite;
+    }
 }

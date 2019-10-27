@@ -13,6 +13,11 @@ TagManager:
   - Cheese
   - TopBun
   - BottomBun
+  - Pan
+  - Knife
+  - Fire
+  - Patty
+  - Burnt
   layers:
   - Default
   - TransparentFX

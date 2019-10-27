@@ -11,15 +11,10 @@ public class AllowGraspedObjects : MonoBehaviour
             = collision.gameObject.GetComponent<InteractionBehaviour>();
         if (interaction && interaction.isGrasped)
         {
-            Debug.Log("Ignoring collision");
             Physics.IgnoreCollision(
                 collision.collider,
                 GetComponent<Collider>()
             );
-        }
-        else
-        {
-            Debug.Log("Not ignoring collision");
         }
     }
 }

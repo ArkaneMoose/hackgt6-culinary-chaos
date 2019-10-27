@@ -55,11 +55,13 @@ public class SpawnTrigger : MonoBehaviour
             template.transform.parent,
             true
         );
+
         cloned.transform.Translate(
             Random.Range(-randomSpawn.x, randomSpawn.x),
             Random.Range(-randomSpawn.y, randomSpawn.y),
             Random.Range(-randomSpawn.z, randomSpawn.z)
         );
+
         cloned.SetActive(true);
     }
 }
